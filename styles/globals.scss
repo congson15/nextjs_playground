@@ -20,7 +20,7 @@ a {
 .background-image {
   .slick-dots {
     @media screen and (min-width: 1024px) {
-      @apply bottom-24;   
+      @apply bottom-10;   
     }
     @apply bottom-3;
     li {
@@ -40,6 +40,12 @@ a {
 }
 }
 .movie-slide{
+  .custom-width{
+    @media screen and (min-width:1024px) {
+      width: 100% !important;
+    }
+    width: 8rem !important;
+  }
   .slick-prev {
     left: -4.8% !important;
     z-index: 1;
