@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  @apply overflow-x-hidden bg-[#0C111B];
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+.background-image {
+  .slick-dots {
+    @media screen and (min-width: 1024px) {
+      @apply bottom-24;   
+    }
+    @apply bottom-3;
+    li {
+      button {
+        @apply p-0 ;
+        &:before {
+          @apply text-white opacity-100;
+        }
+      }
+      &:hover::before{
+        @apply text-white;
+      }
+    }
+    .slick-active button:before {
+      @apply text-red-700 text-[12px];
+    }
+}
+}
+.movie-slide{
+  .slick-prev {
+    left: -4.8% !important;
+    z-index: 1;
+  }
+  .slick-next {
+    right: -4.8% !important;
+    z-index: 1;
+  }
+  .slick-list{
+    .slick-track{
+      .slick-slide{
+        @apply px-2;
+      }
+    }
+  }
+}
