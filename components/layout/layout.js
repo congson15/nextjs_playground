@@ -6,7 +6,7 @@ const Layout = ({children}) => {
     return(
         <>
             <Head>
-                <meta name="referrer" content="https://phimmoichill.net/" />
+                <meta name="referrer" content="origin-when-crossorigin" />
             </Head>
             <div className="flex flex-col min-h-screen">
                 <Header />
