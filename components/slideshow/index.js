@@ -18,16 +18,18 @@ const CustomNextArrow = (props) => {
     );
 }
 
-const SlideShow = ({ children, className = '', slideToShow, infinite=true }) => {
-    const [settings, setSettings] = React.useState(() => {
+const SlideShow = ({ children, className = '', slideToShow, infinite=true, dots=true }) => {
+    const [settings ] = React.useState(() => {
         const initSettings = {
             infinite: infinite,
-            speed: 900,
+            speed: 800,
             slidesToShow: slideToShow,
+            slidesToScroll:className === 'background-image' ? 1 : Number.parseInt(slideToShow),
             autoplay: false,
+            adaptiveHeight:true,
             adaptiveHeight: false,
             className: className,
-            dots: true,
+            dots: dots,
             arrows:true,
             prevArrow: <CustomPreveArrow />,
             nextArrow: <CustomNextArrow />,
@@ -35,22 +37,24 @@ const SlideShow = ({ children, className = '', slideToShow, infinite=true }) => 
                 {
                   breakpoint: 1024,
                   settings: {
-                    slidesToShow: className === 'background-image' ? 1 : slideToShow,
-                    slidesToScroll: className === 'background-image' ? 1 : slideToShow,
+                    slidesToShow: className.includes('background-image') ? 1 : slideToShow,
+                    arrows:true
                   }
                 },
                 {
                   breakpoint: 600,
                   settings: {
-                    slidesToShow: className === 'background-image' ? 1 : 3,
-                    slidesToScroll: className === 'background-image' ? 1 : 3,
+                    slidesToShow: className.includes('background-image') ? 1 : 3,
+                    slidesToScroll: className.includes('background-image') ? 1 : 3,
+                    arrows:false
                   }
                 },
                 {
                   breakpoint: 480,
                   settings: {
-                    slidesToShow: className === 'background-image' ? 1 : 3,
-                    slidesToScroll: className === 'background-image' ? 1 : 3
+                    slidesToShow: className.includes('background-image') ? 1 : 3,
+                    slidesToScroll: className.includes('background-image') ? 1 : 3,
+                    arrows:false
                   }
                 }
             ]

@@ -40,19 +40,26 @@ a {
 }
 }
 .movie-slide{
+  .slick-slide{
+    @apply h-56;
+  }
   .custom-width{
     @media screen and (min-width:1024px) {
-      width: 100% !important;
+        width: 100% !important;
     }
     width: 8rem !important;
   }
   .slick-prev {
-    left: -4.8% !important;
-    z-index: 1;
+    @media screen and (min-width:1024px) {
+      left: -4.8% !important;
+      z-index: 1;
+    }
   }
   .slick-next {
-    right: -4.8% !important;
-    z-index: 1;
+    @media screen and (min-width:1024px) {
+      right: -4.8% !important;
+      z-index: 1;
+    }
   }
   .slick-list{
     .slick-track{
