@@ -10,7 +10,7 @@ const MovieList = ({ title, movies }) => {
         </h3>
         <a href="#" className="hover:bg-gray-600 text-gray-300 text-xs bg-gray-700 p-3 rounded h-5 inline-flex items-center">Xem tất cả</a>
       </div>
-      <div class="flex md:mx-[101px]">
+      <div className="flex md:mx-[101px]">
         <div className="mt-5 w-full">
           <SlideShow slideToShow={4.5} className="movie-slide" infinite={false} dots={false}>
             {Array(20).fill(null).map((index) => <Movie movie={index}/>)}

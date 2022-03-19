@@ -2,14 +2,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 const Movie = ({movie}) => {
   return (
-    <div class="flex flex-col md:w-72 custom-width h-36 p-3 md:p-0" key={movie}>
-      <a href="" class="group relative block mb-2">
+    <div className="flex flex-col md:w-72 custom-width h-36 p-3 md:p-0" key={movie}>
+      <a href="" className="group relative block mb-2">
         <span className="absolute right-0 text-white rounded-l-sm rounded-bl-lg p-1 md:rounded-md z-30 text-[8px] md:text-xs font-semibold tracking-tight cursor-pointer bg-gradient-to-r from-purple-500 to-red-500">
           1080 HD
         </span>
         <img
           src="https://img.phimmoichill.net/images/info/spider-man-no-way-home.jpg"
-          class="h-36 object-cover rounded-sm md:object-contain md:rounded-lg group-hover:scale-105 duration-300 delay-75 ease-in-out w-full"
+          className="h-36 object-cover rounded-sm md:object-contain md:rounded-lg group-hover:scale-105 duration-300 delay-75 ease-in-out w-full"
         />
         <FontAwesomeIcon
           icon={faPlay}
@@ -18,20 +18,20 @@ const Movie = ({movie}) => {
       </a>
       <a
         href="#"
-        class="text-xs hover:text-red-500 text-white md:font-semibold"
+        className="text-xs hover:text-red-500 text-white md:font-semibold"
       >
         Người Nhện: Không Còn Nhà
       </a>
-      <div class="hidden md:flex flex-wrap gap-2 mt-2">
+      <div className="hidden md:flex flex-wrap gap-2 mt-2">
         <a
           href="#"
-          class="hover:bg-gray-600 text-gray-300 text-xs font-semibold bg-gray-700 px-2 py-1 rounded-full"
+          className="hover:bg-gray-600 text-gray-300 text-xs font-semibold bg-gray-700 px-2 py-1 rounded-full"
         >
           Action
         </a>
         <a
           href="#"
-          class="hover:bg-gray-600 text-gray-300 text-xs font-semibold bg-gray-700 px-2 py-1 rounded-full"
+          className="hover:bg-gray-600 text-gray-300 text-xs font-semibold bg-gray-700 px-2 py-1 rounded-full"
         >
           Adventure
         </a>
