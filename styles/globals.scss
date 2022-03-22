@@ -7,7 +7,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  @apply overflow-x-hidden bg-[#0C111B];
+  @apply bg-[#0C111B];
 }
 a {
   color: inherit;
@@ -17,7 +17,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
 .background-image {
+  .slick-next{
+    @apply hidden;
+  }
   .slick-dots {
     @media screen and (min-width: 1024px) {
       @apply bottom-10;   
@@ -68,4 +72,29 @@ a {
       }
     }
   }
+}
+.scrollbar {
+  overflow-x: scroll;
+  margin-bottom: 25px;
+}
+#custom-scrollbar::-webkit-scrollbar-track
+{
+  width: 3px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #0C111B;
+}
+
+#custom-scrollbar::-webkit-scrollbar
+{
+  
+  height: 5px;
+	background-color: #F5F5F5;
+}
+
+#custom-scrollbar::-webkit-scrollbar-thumb
+{
+  width: 3px;
+	background-color: white;
+  border-radius: 10px;
+  
 }

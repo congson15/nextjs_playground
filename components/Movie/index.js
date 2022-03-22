@@ -1,8 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
-const Movie = ({movie}) => {
+const Movie = ({ movie }) => {
   return (
-    <div className="flex flex-col md:w-72 custom-width h-36 p-3 md:p-0" key={movie}>
+    <div
+      className="flex flex-col md:w-72 custom-width h-36 p-3 md:p-0"
+      key={movie}
+    >
       <a href="" className="group relative block mb-2">
         <span className="absolute right-0 text-white rounded-l-sm rounded-bl-lg p-1 md:rounded-md z-30 text-[8px] md:text-xs font-semibold tracking-tight cursor-pointer bg-gradient-to-r from-purple-500 to-red-500">
           1080 HD
@@ -22,19 +25,21 @@ const Movie = ({movie}) => {
       >
         Người Nhện: Không Còn Nhà
       </a>
-      <div className="hidden md:flex flex-wrap gap-2 mt-2">
-        <a
-          href="#"
-          className="hover:bg-gray-600 text-gray-300 text-xs font-semibold bg-gray-700 px-2 py-1 rounded-full"
-        >
-          Action
-        </a>
-        <a
-          href="#"
-          className="hover:bg-gray-600 text-gray-300 text-xs font-semibold bg-gray-700 px-2 py-1 rounded-full"
-        >
-          Adventure
-        </a>
+      <div className="w-full">
+        <div className="hidden md:flex gap-2 overflow-x-auto mt-2 w-full scrollbar" id="custom-scrollbar">
+          <a
+            href="#"
+            className="hover:bg-gray-600 z-50 flex-shrink text-gray-300 text-xs font-semibold bg-gray-700 px-2 py-1 rounded-full"
+          >
+            Action
+          </a>
+          <a
+            href="#"
+            className="hover:bg-gray-600 z-50 flex-shrink text-gray-300 text-xs font-semibold bg-gray-700 px-2 py-1 rounded-full"
+          >
+            Action
+          </a>
+        </div>
       </div>
     </div>
   );

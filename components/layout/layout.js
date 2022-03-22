@@ -1,17 +1,15 @@
 import Head from "next/head";
+import Footer from "./footer";
 import Header from "./header";
-
 
 const Layout = ({children}) => {
     return(
         <>
-            <Head>
-                <meta name="referer" content="https://phimmoichill.net/" />
-            </Head>
+            <Header />
             <div className="flex flex-col min-h-screen">
-                <Header />
                 <main style={{minHeight: 'calc(100vh - 726px)'}}>{children}</main>
             </div>
+            <Footer />
         </>
     )
 }
