@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Footer from "./footer";
 import Header from "./header";
-
+import MobileNavigation from "./footer/mobile";
 const Layout = ({children}) => {
     return(
         <>
@@ -10,6 +10,7 @@ const Layout = ({children}) => {
                 <main style={{minHeight: 'calc(100vh - 726px)'}}>{children}</main>
             </div>
             <Footer />
+            <MobileNavigation />
         </>
     )
 }
