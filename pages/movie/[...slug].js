@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import Layout from "../../components/layout/layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faPlay, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import SlideShow from "../../components/slideshow";
 import Movie from "../../components/Movie";
 import MovieList from "../../components/MovieList";
@@ -11,13 +11,17 @@ const DetailPage = () => {
   return (
     <Layout>
       <div className="group relative block mb-2 w-full">
+        <FontAwesomeIcon
+          icon={faArrowLeft}
+          className="h-6 w-6 p-2 left-3 top-3 text-white absolute"
+        />
         <img
           src="https://img.phimmoichill.net/images/info/spider-man-no-way-home.jpg"
           className="h-48 brightness-75 opacity-60 blur-sm object-cover rounded-sm w-full"
         />
         <FontAwesomeIcon
           icon={faPlay}
-          className="border-4 border-red-400 h-6 w-6 p-2 rounded-full text-red-400 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-50"
+          className="border-[3px] border-red-400 h-6 w-6 p-2 rounded-full text-red-400 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-50"
         />
       </div>
       <div className="absolute top-24 flex flex-col justify-center w-full">
