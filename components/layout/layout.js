@@ -5,7 +5,7 @@ import MobileNavigation from "./footer/mobile";
 const Layout = ({children}) => {
     return(
         <>
-            <Header />
+            <Header/>
             <div className="flex flex-col min-h-screen">
                 <main style={{minHeight: 'calc(100vh - 726px)'}}>{children}</main>
             </div>
