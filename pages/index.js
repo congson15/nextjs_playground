@@ -3,7 +3,7 @@ import MovieList from "../components/MovieList";
 import HeaderMiddle from "../components/layout/header/middle";
 import Loading from '../components/loading';
 export default function HomePage() {
-  if(true) return <Loading />;
+  // if(true) return <Loading />;
   return (
     <Layout>
       <HeaderMiddle />

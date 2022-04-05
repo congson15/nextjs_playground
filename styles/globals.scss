@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&display=swap');
 html,
 body {
   padding: 0;
@@ -20,7 +21,16 @@ a {
 
 .background-image {
   .slick-next {
-    @apply hidden;
+    @apply right-5 h-11 w-11;
+    border:1px solid gray;
+    border-radius: 9999px;
+    padding: 0.5rem;
+  }
+  .slick-prev {
+    @apply left-5 h-11 w-11 z-50;
+    border:1px solid gray;
+    border-radius: 9999px;
+    padding: 0.5rem;
   }
   .slick-dots {
     @media screen and (min-width: 1024px) {
@@ -73,6 +83,9 @@ a {
     }
   }
 }
+
+
+
 .scrollbar {
   overflow-x: auto;
   margin-bottom: 25px;
@@ -115,4 +128,59 @@ a {
 	100% {
 		transform: rotate(360deg);
 	}
+}
+.circle {
+  stroke: red;
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  -webkit-transition: all 0.5s ease-in-out;
+  opacity: 0.3;
+}
+
+.playBut {
+  border-radius: 9999px;
+  display: inline-block;
+  -webkit-transition: all 0.5s ease;
+  
+  .triangle {
+    -webkit-transition: all 0.7s ease-in-out;
+    stroke-dasharray: 240;
+    stroke-dashoffset: 480;
+    stroke: white;
+    transform: translateY(0) 
+   }
+  
+  
+  &:hover {
+    .triangle {
+      stroke-dashoffset: 0;
+      opacity: 1;
+      stroke: red;
+      animation: nudge 0.7s ease-in-out;
+      
+      @keyframes nudge{
+        0% {
+          transform: translateX(0)  
+        }
+        30% {
+          transform: translateX(-4px)
+        }
+        50% {
+          transform: translateX(4px)
+        }
+        70% {
+          transform: translateX(-2px)
+        }
+        100% {
+          transform: translateX(0)
+        }
+      }
+    }
+    
+    .circle {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+    
+  }
 }

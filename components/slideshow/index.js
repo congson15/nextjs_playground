@@ -18,19 +18,19 @@ const CustomNextArrow = (props) => {
     );
 }
 
-const SlideShow = ({ children, className = '', slideToShow, infinite=true, dots=true }) => {
+const SlideShow = ({ children, speed=800, autoplay=false, className = '', slideToShow, infinite=true, dots=true, arrows=true }) => {
     const [settings ] = React.useState(() => {
         const initSettings = {
             infinite: infinite,
-            speed: 800,
+            speed: speed,
             slidesToShow: slideToShow,
             slidesToScroll:className === 'background-image' ? 1 : Number.parseInt(slideToShow),
-            autoplay: false,
+            autoplay: autoplay,
             adaptiveHeight:true,
             adaptiveHeight: false,
             className: className,
             dots: dots,
-            arrows:true,
+            arrows:arrows,
             prevArrow: <CustomPreveArrow />,
             nextArrow: <CustomNextArrow />,
             responsive: [
@@ -54,7 +54,8 @@ const SlideShow = ({ children, className = '', slideToShow, infinite=true, dots=
                   settings: {
                     slidesToShow: className.includes('background-image') ? 1 : 3,
                     slidesToScroll: className.includes('background-image') ? 1 : 3,
-                    arrows:false
+                    arrows:false,
+                    dots:false
                   }
                 }
             ]

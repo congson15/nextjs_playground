@@ -19,7 +19,7 @@ const Header = () => {
   const { data } = useSWR(`${process.env.API}/genre`, fetcher);
 
   return (
-    <nav className="hidden lg:flex items-center justify-between flex-wrap bg-[#0C111B] py-4 lg:px-20 shadow">
+    <nav className="hidden lg:flex items-center justify-between flex-wrap fixed backdrop-blur right-0 left-0 z-50 py-4 lg:px-20 shadow">
       <div className="flex justify-between lg:w-auto w-full lg:border-b-0 pl-6 border-solid border-b-2 border-gray-300">
         <div className="flex items-center flex-shrink-0 text-gray-800 mr-16">
           <span className="font-semibold text-3xl tracking-tight uppercase text-transparent cursor-pointer bg-clip-text bg-gradient-to-r from-purple-500 to-red-500 md:text-center">
