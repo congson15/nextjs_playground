@@ -18,13 +18,13 @@ const CustomNextArrow = (props) => {
     );
 }
 
-const SlideShow = ({ children, speed=800, autoplay=false, className = '', slideToShow, infinite=true, dots=true, arrows=true }) => {
+const SlideShow = ({ children, speed=800, autoplay=false, className = '', slideToShow, infinite=true, dots=true, arrows=true}) => {
     const [settings ] = React.useState(() => {
         const initSettings = {
             infinite: infinite,
             speed: speed,
             slidesToShow: slideToShow,
-            slidesToScroll:className === 'background-image' ? 1 : Number.parseInt(slideToShow),
+            slidesToScroll: 1,
             autoplay: autoplay,
             adaptiveHeight:true,
             adaptiveHeight: false,

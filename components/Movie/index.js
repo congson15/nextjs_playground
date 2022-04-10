@@ -4,49 +4,37 @@ import Link from "next/link";
 const Movie = ({ movie }) => {
   return (
     <div
-      className="flex flex-col md:w-72 custom-width h-36 p-3 md:p-0"
+      className="flex flex-col md:w-3/4 custom-width h-48 p-3 md:p-0"
       key={movie}
     >
       <Link href="/movie/abc">
         <a className="group relative block mb-2 w-32 md:w-full">
-          <span className="text-[10px] absolute right-0 text-white rounded-l-sm rounded-bl-lg p-1 md:rounded-md z-30 lg:text-[8px] md:text-xs font-semibold tracking-tight cursor-pointer bg-gradient-to-r from-purple-500 to-red-500">
-            1080 HD
-          </span>
           <img
             src="https://img.phimmoichill.net/images/info/spider-man-no-way-home.jpg"
-            className="h-48 brightness-75 md:h-36 object-cover rounded-sm md:object-contain md:rounded-lg group-hover:scale-105 duration-300 delay-75 ease-in-out w-full"
+            className="h-48 md:h-48 brightness-50 object-cover rounded-sm md:object-contain md:rounded-lg group-hover:scale-105 duration-300 delay-75 ease-in-out w-full group-hover:opacity-30"
           />
-          <FontAwesomeIcon
-            icon={faPlay}
-            className="group-hover:visible invisible duration-100 delay-75 ease-in-out text-red-400 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-3xl md:text-5xl opacity-75"
-          />
-          <a
-            href="#"
-            className="visible text-xs absolute left-3 bottom-3 hover:text-red-500 text-white md:font-semibold"
-          >
-            Người Nhện: Không Còn Nhà
-          </a>
+          <div className="absolute left-3 bottom-3 flex flex-col w-full h-44 justify-center">
+            <div className="my-3 flex flex-col">
+              <a
+                href="#"
+                className="text-xs hover:text-red-500 mb-3 text-white font-semibold"
+              >
+                Người Nhện: Không Còn Nhà
+              </a>
+              <span className="text-xs text-white font-semibold">
+                1h 45mins
+              </span>
+            </div>
+            <a
+              href="#"
+              class="bg-red-700 w-[35%] hidden xl:block font-semibold text-white px-2 py-2 text-xs transition duration-300 ease-in-out hover:bg-red-800"
+            >
+              <FontAwesomeIcon icon={faPlay} className="mx-2" />
+              Play Now
+            </a>
+          </div>
         </a>
       </Link>
-      <div className="w-full">
-        <div
-          className="hidden md:flex gap-2 overflow-x-auto mt-2 w-full scrollbar"
-          id="custom-scrollbar"
-        >
-          <a
-            href="#"
-            className="hover:bg-gray-600 z-50 flex-shrink text-gray-300 text-xs font-semibold bg-gray-700 px-2 py-1 rounded-full"
-          >
-            Action
-          </a>
-          <a
-            href="#"
-            className="hover:bg-gray-600 z-50 flex-shrink text-gray-300 text-xs font-semibold bg-gray-700 px-2 py-1 rounded-full"
-          >
-            Action
-          </a>
-        </div>
-      </div>
     </div>
   );
 };
