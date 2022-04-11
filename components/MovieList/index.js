@@ -13,7 +13,7 @@ const MovieList = ({ title, movies }) => {
       <div className="flex md:mx-[101px]">
         <div className="md:mt-3 w-full">
           <SlideShow slideToShow={4} className="movie-slide" infinite={false} dots={false}>
-            {Array(16).fill(null).map((index) => <Movie movie={index}/>)}
+            {Array(16).fill(null).map((index) => <Movie key={index} movie={index}/>)}
           </SlideShow>
         </div>
       </div>
