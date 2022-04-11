@@ -64,7 +64,6 @@ const SlideShow = ({ children, speed=800, autoplay=false, className = '', slideT
         return initSettings;
     });
     return (
-        
         <Slider {...settings}>
             {children}
         </Slider>
