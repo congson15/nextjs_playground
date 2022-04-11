@@ -27,7 +27,7 @@ const Movie = ({ movie }) => {
             </div>
             <a
               href="#"
-              class="bg-red-700 w-[35%] hidden xl:block font-semibold text-white px-2 py-2 text-xs transition duration-300 ease-in-out hover:bg-red-800"
+              className="bg-red-700 w-[35%] hidden xl:block font-semibold text-white px-2 py-2 text-xs transition duration-300 ease-in-out hover:bg-red-800"
             >
               <FontAwesomeIcon icon={faPlay} className="mx-2" />
               Play Now
