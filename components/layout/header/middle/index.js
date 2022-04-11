@@ -1,9 +1,10 @@
-import SlideShow from "../../../slideshow";
+import SlideShow from "../../../SlideShow";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faStar } from "@fortawesome/free-solid-svg-icons";
 const img = [1, 2, 3, 4];
 
 const HeaderMiddle = () => {
+
   return (
     <div className="relative">
       <div className="md:hidden absolute z-50 text-white p-3 w-full">
@@ -23,7 +24,7 @@ const HeaderMiddle = () => {
         className="background-image mb-4 md:mb-24"
         slideToShow={1}
         speed={750}
-        dots={false}
+        dots={true}
         autoplay={true}
       >
         {img.map((item, index) => (
@@ -36,7 +37,11 @@ const HeaderMiddle = () => {
 
             <div class="absolute top-32 left-0 px-6 md:top-10 lg:top-40 lg:mx-20 grid grid-cols-2 grid-flow-col">
               <div className="col-span-10">
-              <h3 class="hidden md:flex bg-gradient-to-r w-1/4 h-10 from-[#ff3741] opacity-70 border-l-4 border-[#e50914] mb-10 px-4 items-center"><span className="items-center text-2xl font-bold text-white opacity-100">FULL HD</span></h3>
+                <h3 class="hidden md:flex bg-gradient-to-r w-1/4 h-10 from-[#ff3741] opacity-70 border-l-4 border-[#e50914] mb-10 px-4 items-center">
+                  <span className="items-center text-2xl font-bold text-white opacity-100">
+                    FULL HD
+                  </span>
+                </h3>
                 <h4 class="uppercase text-xl font-semibold tracking-tight text-white font-monsterrat lg:text-[3.026rem]">
                   Spider-Man: No Way Home
                 </h4>
@@ -55,13 +60,20 @@ const HeaderMiddle = () => {
                 </p>
                 <div className="hidden md:block my-6 w-2/3">
                   <div className="text-red-700 text-lg font-monsterrat font-medium">
-                    Thể loại: <span className="text-gray-50 text-sm">Phiêu Lưu, Viễn Tưởng, Hành Động</span>
+                    Thể loại:{" "}
+                    <span className="text-gray-50 text-sm">
+                      Phiêu Lưu, Viễn Tưởng, Hành Động
+                    </span>
                   </div>
                   <div className="text-red-700 text-lg font-monsterrat font-medium">
-                    Diễn viên: <span className="text-gray-50 text-sm">Tom Holland, Zendaya, Benedict Cumberbatch</span>
+                    Diễn viên:{" "}
+                    <span className="text-gray-50 text-sm">
+                      Tom Holland, Zendaya, Benedict Cumberbatch
+                    </span>
                   </div>
                   <div className="text-red-700 text-lg font-monsterrat font-medium">
-                    Lượt xem: <span className="text-gray-50 text-sm">600,096</span>
+                    Lượt xem:{" "}
+                    <span className="text-gray-50 text-sm">600,096</span>
                   </div>
                 </div>
                 <a
@@ -73,7 +85,10 @@ const HeaderMiddle = () => {
                 </a>
               </div>
               <div className="hidden col-span-2 items-center lg:flex mb-16">
-                <a href="#" class="playBut mr-5 transition delay-[1000ms] hover:border-none">
+                <a
+                  href="#"
+                  class="playBut mr-5 transition delay-[1000ms] hover:border-none"
+                >
                   <svg
                     version="1.1"
                     xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +128,9 @@ const HeaderMiddle = () => {
                     />
                   </svg>
                 </a>
-                <span className="uppercase text-2xl leading-5 tracking-[0.75rem] text-gray-50">Trailer</span>
+                <span className="uppercase text-2xl leading-5 tracking-[0.75rem] text-gray-50">
+                  Trailer
+                </span>
               </div>
             </div>
           </div>

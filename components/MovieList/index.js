@@ -1,6 +1,6 @@
 
 import Movie from "../Movie";
-import SlideShow from "../slideshow";
+import SlideShow from "../SlideShow";
 const MovieList = ({ title, movies }) => {
   return (
     <div className="mb-5 lg:mb-14 mx-auto items-center">
@@ -12,7 +12,7 @@ const MovieList = ({ title, movies }) => {
       </div>
       <div className="flex md:mx-[101px]">
         <div className="md:mt-3 w-full">
-          <SlideShow slideToShow={4.5} className="movie-slide" infinite={false} dots={false}>
+          <SlideShow slideToShow={4} className="movie-slide" infinite={false} dots={false}>
             {Array(20).fill(null).map((index) => <Movie movie={index}/>)}
           </SlideShow>
         </div>
