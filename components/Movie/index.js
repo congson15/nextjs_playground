@@ -4,14 +4,14 @@ import Link from "next/link";
 const Movie = ({ movie }) => {
   return (
     <div
-      className="flex flex-col md:w-3/4 custom-width h-48 p-3 md:p-0"
+      className="flex flex-col md:w-3/4 custom-width h-48 p-1 transform transition duration-500 hover:scale-110 group"
       key={movie}
     >
       <Link href="/movie/abc">
-        <a className="group relative block mb-2 w-32 md:w-full">
+        <a className="relative block mb-2 w-32 md:w-full ">
           <img
             src="https://img.phimmoichill.net/images/info/spider-man-no-way-home.jpg"
-            className="h-48 md:h-48 brightness-50 object-cover rounded-sm md:object-contain md:rounded-lg group-hover:scale-105 duration-300 delay-75 ease-in-out w-full group-hover:opacity-30"
+            className="h-48 md:h-48 brightness-50 object-cover rounded-sm md:object-contain md:rounded-lg w-full group-hover:opacity-30"
           />
           <div className="absolute left-3 bottom-3 flex flex-col w-full h-44 justify-center">
             <div className="my-3 flex flex-col">
