@@ -1,6 +1,6 @@
 
 import Movie from "../Movie";
-import SlideShow from "../Slideshow";
+import SlideShow from "../slideshow";
 const MovieList = ({ title, movies }) => {
   return (
     <div className="mb-5 lg:mb-14 mx-auto items-center">

@@ -1,4 +1,4 @@
-import SlideShow from "../../../Slideshow";
+import SlideShow from "../../../slideshow";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faStar } from "@fortawesome/free-solid-svg-icons";
 const img = [1, 2, 3, 4];
