@@ -34,7 +34,7 @@ const HeaderMiddle = () => {
               alt="background"
               className="brightness-[0.3] h-full object-cover"
             />
-
+            <div className="blur-el"></div>
             <div className="absolute top-32 left-0 px-6 md:top-10 lg:top-40 lg:mx-20 grid grid-cols-2 grid-flow-col">
               <div className="col-span-10">
                 <h3 className="hidden md:flex bg-gradient-to-r w-1/4 h-10 from-[#ff3741] opacity-70 border-l-4 border-[#e50914] mb-10 px-4 items-center">

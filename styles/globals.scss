@@ -184,3 +184,14 @@ a {
     
   }
 }
+.blur-el{
+  &:before{
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(20, 20, 20, 0.9) 15%, rgba(83, 100, 141, 0) 100%);
+    width: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+}
