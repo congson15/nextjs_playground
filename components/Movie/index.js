@@ -13,7 +13,7 @@ const Movie = ({ movie }) => {
             src="https://img.phimmoichill.net/images/info/spider-man-no-way-home.jpg"
             className="h-48 md:h-48 brightness-50 object-cover rounded-sm md:object-contain md:rounded-lg w-full group-hover:opacity-30"
           />
-          <div className="absolute left-3 bottom-3 flex flex-col w-full h-44 justify-center">
+          <div className="absolute left-3 xl:left-10 bottom-3 flex flex-col w-full h-44 justify-center">
             <div className="my-3 flex flex-col">
               <a
                 href="#"
